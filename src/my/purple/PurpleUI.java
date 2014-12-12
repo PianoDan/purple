@@ -237,6 +237,7 @@ public class PurpleUI extends javax.swing.JFrame {
     public PurpleUI() {
         initComponents();
         bulkInputTextArea.addMouseListener(new ContextMenuMouseListener()); 
+        outputTextArea.addMouseListener(new ContextMenuMouseListener());
     }
 
     /**
