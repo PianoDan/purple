@@ -9,6 +9,9 @@ import java.util.ArrayList;
 /**
  *
  * @author Dan
+ * 
+ * Version History: 1.3 - added Cut and Paste context menu
+ * 
  */
 public class PurpleUI extends javax.swing.JFrame {
     int[][] sixesDecryptData = 
@@ -233,6 +236,7 @@ public class PurpleUI extends javax.swing.JFrame {
      */
     public PurpleUI() {
         initComponents();
+        bulkInputTextArea.addMouseListener(new ContextMenuMouseListener()); 
     }
 
     /**
@@ -495,7 +499,7 @@ public class PurpleUI extends javax.swing.JFrame {
         encryptButton.setText("Encrypt");
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel10.setText("Purple Cypher Machine v. 1.2 by Daniel Alt");
+        jLabel10.setText("Purple Cypher Machine v. 1.3 by Daniel Alt");
 
         bulkInputTextArea.setColumns(20);
         bulkInputTextArea.setRows(5);
@@ -581,7 +585,7 @@ public class PurpleUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
     private void inputTextAreaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_inputTextAreaKeyPressed
         //Process data entered character-by-character
         
@@ -727,7 +731,7 @@ public class PurpleUI extends javax.swing.JFrame {
     private void twentiesStartBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twentiesStartBox3ActionPerformed
         twentiesBox3.setText(Integer.toString(twentiesStartBox3.getSelectedIndex()+1));
     }//GEN-LAST:event_twentiesStartBox3ActionPerformed
-
+   
     private void bulkTranslateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bulkTranslateButtonActionPerformed
        //Process bulk text data
         
